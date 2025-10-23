@@ -3,15 +3,15 @@ import "./app.css";
 import { Saludo } from "./components/saludo.jsx";
 import { Routes, Route } from "react-router";
 import { HomeScrean } from "./screan/HomeScrean.jsx";
-import LoginScrean from "./screan/loginScrean.jsx";
+import LoginScreen from "./screan/LoginScrean.jsx";
 import RegisterScrean from "./screan/RegisterScrean.jsx";
 import { Auth_middleware } from "./midelware/Auth_midelware.jsx";
 function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<LoginScrean />} />
-        <Route path="/Login" element={<LoginScrean />} />
+        <Route path="/" element={<LoginScreen />} />
+        <Route path="/Login" element={<LoginScreen />} />
         <Route element={<Auth_middleware />}>
           <Route path="/home" element={<HomeScrean />} />
         </Route>
